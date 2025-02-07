@@ -12,3 +12,9 @@ type Bank struct {
 	IsHeadquarter bool `json:"is_headquarter"`
 	HedquaterID 	*uint `json:"headquarter_id"`
 }
+
+type Country struct {
+	ID        	uint   `json:"id" gorm:"primary_key"`
+	CountryISO2 string `json:"country_iso2" gorm:"unique;not null"`
+	CountryName string `json:"country_name"`
+}
