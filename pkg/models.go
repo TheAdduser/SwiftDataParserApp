@@ -1,7 +1,5 @@
 package pkg
 
-import "github.com/jinzhu/gorm"
-
 type Bank struct {
 	ID            uint   `json:"id" gorm:"primary_key"`
 	CountryISO2   string `json:"countryISO2"`
