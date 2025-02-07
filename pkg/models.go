@@ -3,18 +3,15 @@ package pkg
 import "github.com/jinzhu/gorm"
 
 type Bank struct {
-	ID	 					uint   `json:"id" gorm:"primary_key"`
-	SwiftCode 		string `json:"swift_code" gorm:"unique;not null"`
-	Address 			string `json:"address"`
-	BankName 			string `json:"bank_name"`
-	CountryISO2 	string `json:"country_iso2"`
-	CountryName 	string `json:"country_name"`
-	IsHeadquarter bool `json:"is_headquarter"`
-	HedquaterID 	*uint `json:"headquarter_id"`
-}
-
-type Country struct {
-	ID        	uint   `json:"id" gorm:"primary_key"`
-	CountryISO2 string `json:"country_iso2" gorm:"unique;not null"`
-	CountryName string `json:"country_name"`
+	ID            uint   `json:"id" gorm:"primary_key"`
+	CountryISO2   string `json:"countryISO2"`
+	SwiftCode     string `json:"swiftCode"`
+	CodeType      string `json:"codeType"`
+	BankName      string `json:"bankName"`
+	Address       string `json:"address"`
+	TownName      string `json:"townName"`
+	CountryName   string `json:"countryName"`
+	TimeZone      string `json:"timeZone"`
+	IsHeadquarter bool   `json:"isHeadquarter"`
+	HeadquarterID *uint  `json:"headquarterId,omitempty"`
 }
